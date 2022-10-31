@@ -1,3 +1,34 @@
 # b/170267149
 dontaudit system_server proc_irq:dir search ;
 dontaudit system_server proc_scsi:dir search ;
+
+
+allow system_server sysfs:file read;
+allow system_server system_data_root_file:dir write;
+allow system_server system_data_root_file:dir read;
+allow system_server system_data_root_file:dir add_name;
+allow system_server system_data_root_file:dir create;
+allow system_server system_data_root_file:dir remove_name;
+allow system_server system_data_root_file:dir reparent;
+allow system_server system_data_root_file:dir search;
+allow system_server system_data_root_file:dir rmdir;
+allow system_server system_data_root_file:dir open;
+allow system_server system_data_root_file:dir audit_access;
+allow system_server system_data_root_file:dir execmod;
+allow system_server default_android_service:service_manager add;
+
+
+allow system_server system_data_root_file:file create;
+allow system_server system_data_root_file:file write;
+allow system_server system_data_root_file:file read;
+allow system_server system_data_root_file:file lock;
+allow system_server system_data_root_file:file append;
+allow system_server system_data_root_file:file open;
+allow system_server system_data_root_file:file ioctl;
+allow system_server system_data_root_file:file getattr;
+allow system_server system_data_root_file:file setattr;
+allow system_server system_data_root_file:file relabelfrom;
+allow system_server system_data_root_file:file relabelto;
+allow system_server system_data_root_file:file unlink;
+allow system_server system_data_root_file:file link;
+allow system_server system_data_root_file:file rename;
